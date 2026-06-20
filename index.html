@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fashion Shoes</title>
+<style>
+
+body{margin:0;font-family:Arial,sans-serif;background:#f5f5f5}
+header{background:#111;color:#fff;text-align:center;padding:40px}
+nav{background:#222;padding:10px;text-align:center}
+nav a{color:white;text-decoration:none;margin:0 15px}
+.hero{padding:50px;text-align:center;background:white}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:20px}
+.card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.card img{width:100%;height:250px;object-fit:cover}
+.card h3,.card p{padding:0 15px}
+.btn{display:inline-block;background:black;color:white;padding:10px 20px;text-decoration:none;border-radius:5px;margin:15px}
+#buscar{width:80%;max-width:500px;padding:12px;font-size:16px}
+.vendedores,.contacto{background:white;margin:20px;padding:20px;border-radius:10px}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;text-decoration:none}
+footer{background:#111;color:white;text-align:center;padding:20px}
+</style>
+<script>
+function filtrar(){
+ let texto=document.getElementById('buscar').value.toLowerCase();
+ let cards=document.querySelectorAll('.card');
+ cards.forEach(c=>{
+  c.style.display=c.innerText.toLowerCase().includes(texto)?'block':'none';
+ });
+}
+</script>
+</head>
+<body>
+
+<header>
+<h1>FASHION SHOES</h1>
+<p>Calzados de Moda y Comodidad</p>
+</header>
+En Fashion Shoes creemos que el calzado es más que un accesorio: 
+es una forma de expresar tu estilo. Descubre nuestra colección, 
+diseñados para ofrecer comodidad, calidad y las últimas tendencias de la moda.
+
+<nav>
+<a href="#productos">Productos</a>
+<a href="#vendedores">Vendedores</a>
+<a href="#contacto">Contacto</a>
+</nav>
+
+<section class="hero">
+<h2>Bienvenido a Fashion Shoes</h2>
+<p>Encuentra los mejores Chunky Shoes.</p>
+<input type="text" id="buscar" onkeyup="filtrar()" placeholder="Buscar calzado...">
+</section>
+
+<section id="productos" class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800">
+<h3>Chunky Urban</h3>
+<p>Diseño moderno y plataforma alta.</p>
+<a class="btn" href="https://wa.me/595982234254">Comprar</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800">
+<h3>Chunky Street</h3>
+<p>Estilo urbano para cualquier ocasión.</p>
+<a class="btn" href="https://wa.me/595986867549">Comprar</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=800">
+<h3>Chunky Premium</h3>
+<p>Máxima comodidad y diseño exclusivo.</p>
+<a class="btn" href="https://wa.me/595983197351">Comprar</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=800">
+<h3>Chunky Sport</h3>
+<p>Perfecto para el día a día.</p>
+<a class="btn" href="https://wa.me/595973703999">Comprar</a>
+</div>
+
+</section>
+
+<section id="vendedores" class="vendedores">
+<h2>Vendedores</h2>
+<p>Johana: 0982234254</p>
+<p>Ariel: 0986867549</p>
+<p>Rodney: 0983197351</p>
+<p>Lucas: 0973703999</p>
+</section>
+
+<section id="contacto" class="contacto">
+<h2>Contacto</h2>
+<p>Escríbenos por WhatsApp para conocer precios y disponibilidad.</p>
+</section>
+
+<a class="whatsapp" href="https://wa.me/595982234254">WA</a>
+
+<footer>
+© 2026 Fashion Shoes
+</footer>
+
+</body>
+</html>
